@@ -1,0 +1,29 @@
+.footer-social-logo{
+    /* this component wraps the followus, footer social and the 
+    footer logo*/
+    display: flex;
+    margin: 0;
+}
+.footer-social-logo h3{
+    color: gray;
+    margin-bottom: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.15rem;
+}
+.footer-logo{
+    /* this component wraps the footer logo */
+    display: none;
+}
+.social-links{
+    /* this component wraps the social links */
+    display: flex;
+    gap: 0.4rem;
+}
+
+@media (min-width: 768px) { 
+    .footer-logo{
+        display: flex;
+        flex-direction: column;
+    }  
+}

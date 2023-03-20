@@ -1,0 +1,43 @@
+footer {
+    background: #000000da;
+}
+footer hr{
+    border: 1px solid #001aff;
+}
+.footer-container {
+    color:white;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.footer-body h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: gray;
+}
+.footer-resources-list{
+    list-style: none;
+    color: white;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.footer-resources-list li{
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+.footer-product-list a{
+    color: white;
+    text-decoration: underline;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+@media (min-width:768px) {
+    
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import "./Footer.css";
-import FooterResourcesItem from "./footer-resources/FooterResourcesItem";
+import "../Footer.css";
+import FooterResourcesItem from "./FooterResourcesItem";
 
 const FooterResources = () => {
     return(

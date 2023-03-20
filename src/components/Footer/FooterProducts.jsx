@@ -5,8 +5,8 @@ import ProductList from "../Lists/ProductList";
 const FooterProducts = () => {
     return (
         <div className="footer-products">
-            <h3>Products</h3>
-            <ProductList className={'footer-product-list'} />
+            <h3>Productos</h3>
+            <ProductList className={'footer-product-list'} useLink={true}/>
         </div>
     );
 };
