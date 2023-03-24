@@ -1,15 +1,12 @@
 import React from "react";
 import "./footer-social-logo.css";
-import { BsFacebook,BsInstagram } from "react-icons/bs";
+import SocialLinks from "../../Common/SocialLinks/SocialLinks";
 
-const FooterSocial = ({iconSize, color}) => {
+const FooterSocial = () => {
     return ( 
         <div className="footer-social">
-            <h3>Síguenos</h3>
-            <div className="social-links">
-                <a href="https://www.facebook.com/"><BsFacebook className="footer-social-icon" color={color} size={iconSize}/></a>
-                <a href="https://www.instagram.com/"><BsInstagram className="footer-social-icon" color={color} size={iconSize}/></a>
-            </div>
+            <h3 className="follow-us-footer">Síguenos</h3>
+            <SocialLinks iconSize={"1.6rem"} color={"gray"} />
         </div>
     );
 }

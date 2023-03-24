@@ -1,9 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Footer.css";
 
-const FooterResourcesItem = ({ title, link }) => {
+const FooterResourcesItem = ({ title, link='/page-not-found' }) => {
     return(
-        <li href={link} className="footer-resources-item">{title}</li>
+        <li className="footer-resources-item">
+            <Link to={link}>{title}</Link>
+        </li>
+        
     )
 }
 

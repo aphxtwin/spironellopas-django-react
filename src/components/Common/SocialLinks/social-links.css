@@ -1,0 +1,6 @@
+.social-links{
+    /* this component wraps the social links */
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}

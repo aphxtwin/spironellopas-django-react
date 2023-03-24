@@ -8,17 +8,19 @@ const Footer = () => {
     return (
         <footer>
             <hr></hr>
-            <div className="footer-container">
-                <div className="footer-top">
+            <div className="footer-container">               
+                <div className="footer-column">
                     <FooterSocialLogo />
                 </div>
-                <div className="footer-body">
+                <div className="footer-column">
                     <FooterProducts />
+                </div>
+                <div className="footer-column">
                     <FooterResources />
                 </div>
-                <div className="footer-bottom">
+            </div>
+            <div className="footer-row">
                     <FooterBottom />
-                </div>
             </div>
         </footer>
     );
