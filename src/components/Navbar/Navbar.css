@@ -14,9 +14,6 @@ nav{
     height: 100%;
     padding: 0 1rem;
 }
-.navbar-logo {
-    margin-top: 0.15rem;
-}
 
 .menu-icon{
     margin-top: 0.25rem;
@@ -27,9 +24,9 @@ nav{
 .nav-menu{
     display: block;
     position: absolute;
-    top: 2.3rem;
+    top: 3.3rem;
     right: 0;
-    width: 61%;
+    width: 75vw;
     height: 100vh;
     background-color: #303030;
     color: white;
@@ -39,6 +36,7 @@ nav{
     overflow: auto;
     transition: transform 0.4s ease-out, visibility 0s 0.5s;
 }
+
 
 .nav-menu.active{
     transform: translate(0);
@@ -50,16 +48,55 @@ nav{
     display: flex;
     justify-content: center;
     align-items:center;
-    height: 3.5rem;
+    height: 10vh;
 }
 .navbar-social{
     margin-top: 10%;
     display: flex;
-    flex-direction: column;
-}
-.social-links{
-    display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-right: 1rem;
-    gap: 1.3rem;
+    align-items: center;
+    gap: 1rem;
+
+}
+.navbar-desktop{
+    display: none;
+}
+.navbar-desktop ul{
+    display: none;
+}
+.cta-button-navbar{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+.cta-button{
+    border: 2px solid white;
+}
+
+@media (min-width:768px) {
+    nav{
+        background-color: #6638ff;  
+    }
+    .nav-menu{
+        display: none;
+    }
+    .nav-menu.active{
+        display: none;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+    .navbar-desktop{
+        display: flex;
+        padding: 0 0.8rem;
+    }
+    .navbar-desktop ul{
+        display:flex;
+        list-style: none;
+        gap: 2rem;
+        flex-direction: row;
+        color: white;
+    }
+    
 }

@@ -16,7 +16,7 @@
     .footer-logo{
         display: flex;
         flex-direction: row;
-        margin-left: 0.61rem;
+        margin-left: 2rem;
     }
     .footer-social-logo{
         display: flex;

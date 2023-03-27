@@ -7,7 +7,7 @@ import "./CallToAction.css";
 
 */
 
-const CallToAction = ({ textButton, padding={
+const CallToAction = ({ textButton='COTIZA AHORA', color="#4c00ff", backgroundColor='white' , textSize='0.8rem', padding={
     top: '1rem',
     right: '2.8rem',
     bottom: '1rem',
@@ -17,7 +17,10 @@ const CallToAction = ({ textButton, padding={
         paddingTop: padding.top,
         paddingRight: padding.right,
         paddingBottom: padding.bottom,
-        paddingLeft: padding.left
+        paddingLeft: padding.left,
+        fontSize: textSize,
+        backgroundColor: backgroundColor,
+        color:color
     }
     return(
         <button style={Style} className="cta-button"> {textButton}</button>

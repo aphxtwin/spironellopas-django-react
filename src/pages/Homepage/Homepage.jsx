@@ -1,10 +1,11 @@
 import React from "react";
-import HomePageHeader from "../../components/Headers/HomePageHeader/HomePageHeader";
+import Header from "../../components/Headers/Header";
 import "./homepage.css";
+
 const Homepage = () => {
     return (
         <div className="home-container">
-            <HomePageHeader title={"El Seguro Que conviene"} subtitle={"Protección instantánea. Unidos por tus intereses."}/>
+            <Header headerClass='homepage' title={"El Seguro Que conviene"} subtitle={"Protección instantánea. Unidos por tus intereses."}/>
         </div>
     );
 }
