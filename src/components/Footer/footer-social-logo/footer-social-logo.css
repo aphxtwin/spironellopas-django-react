@@ -14,9 +14,10 @@
 
 @media (min-width: 768px) { 
     .footer-logo{
+        width: 90px;
+        height: 100px;
         display: flex;
         flex-direction: row;
-        margin-left: 2rem;
     }
     .footer-social-logo{
         display: flex;

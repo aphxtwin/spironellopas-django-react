@@ -1,0 +1,79 @@
+nav{
+    height: 3.3rem;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+
+.logoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logoContainer img{
+    width: 50px;
+    height: 50px;
+}
+
+.navbarDesktop{
+    display: none;
+}
+.navbarDesktop ul{
+    display: none;
+}
+.CtaNavbar {
+    background-color: white;
+    pointer-events: none;
+    width: 8rem;
+    height: 2rem;
+    opacity:0;
+    padding: 0.01rem;
+    font-size: 15px;
+    transform: translateY(-20px);
+}
+
+.CtaNavbar.active{
+    display: flex;
+    pointer-events: auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+@media (min-width:768px) {
+    nav{
+        background-color: #6638ff;  
+    }
+   
+    .navbarDesktop{
+        display: flex;
+        padding: 0 0.8rem;
+    }
+    .navbarDesktop ul{
+        display:flex;
+        list-style: none;
+        gap: 2rem;
+        flex-direction: row;
+        color: white;
+    }
+    .CtaNavbar{
+        width: 8rem;
+        height: 2rem;
+        font-size: 20px;
+    }
+}

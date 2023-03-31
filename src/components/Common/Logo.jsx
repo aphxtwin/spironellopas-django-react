@@ -1,6 +1,6 @@
 import React from "react";
 
-const Logo = ({size, logoType }) => {
-    return <img src={ logoType } width={size.Width} height={size.Height} alt="Logo" />;
+const Logo = ({ logoType }) => {
+    return <img src={ logoType } alt="Logo" />;
 };
 export default Logo;
