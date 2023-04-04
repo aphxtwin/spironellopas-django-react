@@ -4,7 +4,7 @@
     color:white;
 }
 
-.NavMenu{
+.NavMenu {
     display: block;
     position: absolute;
     top: 3.3rem;
@@ -39,14 +39,3 @@
     border: 1px solid white;
 }
 
-@media (min-width:768px){
-    .NavMenu{
-        display: none;
-    }
-    .NavMenu.active{
-        display: none;
-    }
-    .MenuIcon{
-        display: none;
-    }
-}

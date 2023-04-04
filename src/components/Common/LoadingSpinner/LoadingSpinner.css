@@ -1,0 +1,17 @@
+.LoadingSpinner {
+    border: 10px solid rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: #fdfdfd;
+    animation: LoadingSpinner 1s linear infinite;
+  }
+  
+  @keyframes LoadingSpinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

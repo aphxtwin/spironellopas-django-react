@@ -1,0 +1,28 @@
+.ProductSelect{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.Loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+}
+
+@media (min-width: 768px) {
+    .ProductSelect{
+        gap: 15px;
+    }
+    .Loading{
+        padding:200px
+    }
+}

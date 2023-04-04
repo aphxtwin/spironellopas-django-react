@@ -76,4 +76,11 @@ nav{
         height: 2rem;
         font-size: 20px;
     }
+    .NavMenu{
+        display: none;
+    }
+    .MenuIcon{
+        display: none;
+    }
+
 }

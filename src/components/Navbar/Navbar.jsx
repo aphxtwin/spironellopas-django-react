@@ -49,7 +49,7 @@ const Navbar = () => {
                     />
                 </div>
                 <div className={styles.navbarMobile}>
-                    <NavMenu />
+                    <NavMenu customClassName={styles.NavMenu} iconColor={'white'}/>
                 </div>
                 <div className={styles.navbarDesktop}>
                     <NavItems social={false} />

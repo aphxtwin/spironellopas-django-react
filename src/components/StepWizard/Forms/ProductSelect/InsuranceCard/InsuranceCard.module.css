@@ -1,0 +1,74 @@
+.InsuranceCard{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    margin:16px;
+    width: 140px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.InsuranceCard:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+.InsuranceCardImage {
+    height: 96px;
+    width: 100%;
+}
+.InsuranceCard img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.InsuranceCardTitle{
+    font-size: 0.75rem;
+    font-weight: 600;
+    height: 20px;
+    color: black;
+    margin: 0;
+}
+.InsuranceCardTitle h3{
+    margin: 0;
+}
+.SelectedCheckBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .SelectedCheckBox input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+  }
+
+@media (min-width:768px) {
+    .InsuranceCard{
+        width: 240px;
+        height: 330px;
+    }
+    .InsuranceCardImage {
+        height: 200px;
+    }
+    .InsuranceCardTitle{
+        font-size: 1.2rem;
+        height: 60px;
+    }
+    .InsuranceCardTitle h3{
+        margin: 0;
+    }
+    .SelectedCheckBox{
+        height: 100px;
+    }
+    .SelectedCheckBox input[type="checkbox"] {
+        height: 35px;
+        width: 35px;
+      }
+
+}

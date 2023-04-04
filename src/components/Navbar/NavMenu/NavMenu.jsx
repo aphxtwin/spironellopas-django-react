@@ -11,7 +11,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 // css
 import style from "./NavMenu.module.css";
 
-const NavMenu = ({customClassName}) => {
+const NavMenu = ({customClassName, iconColor, customMenuClassName }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const handleClick = () => setMenuOpen(!menuOpen);
     
@@ -41,20 +41,15 @@ const NavMenu = ({customClassName}) => {
     }, []);
 
     const handleIconActive = 
-        menuOpen 
-            ? `${style.MenuIcon} ${style.active} ${customClassName}`
-            : `${style.MenuIcon} ${customClassName}`;
+        `${style.MenuIcon} ${menuOpen ? style.active : ''}`
             
     const handleMenuActive = 
-        menuOpen 
-            ? `${style.NavMenu} ${style.active} ${customClassName}`
-            : `${style.NavMenu} ${customClassName}`
-    
+        `${style.NavMenu} ${customMenuClassName ? customMenuClassName : ''} ${menuOpen ? style.active : ''}`
 
     return(
-        <div className={style.NavbarMenu}>
+        <div className={`${customClassName ? customClassName : ''}` }>
             <div ref={menuButtonRef} className={ handleIconActive } onClick={handleClick}>
-                <FontAwesomeIcon icon= {menuOpen ? faXmark : faBars } />
+                <FontAwesomeIcon icon = {menuOpen ? faXmark : faBars } style={{color : iconColor}} />
             </div>
             <div ref={navMenuRef} className={ handleMenuActive }>
                 <NavItems />
