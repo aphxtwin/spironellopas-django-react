@@ -1,0 +1,27 @@
+.ProgressBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    padding: 3px 12px 3px 12px;
+    border: 2px solid rgb(30, 30, 30);
+    background-color: rgb(205, 196, 255);
+    border-radius: 5px;
+}
+
+.NextButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.disabledNextButton{
+    cursor: not-allowed;
+    color: gray;
+    border-color: gray;
+    background-color: rgb(222, 222, 222);
+}
+
+

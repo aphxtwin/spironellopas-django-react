@@ -6,7 +6,7 @@
 
 .NavMenu {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 3.3rem;
     right: 0;
     width: 75vw;

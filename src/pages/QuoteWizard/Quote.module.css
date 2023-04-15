@@ -1,20 +1,24 @@
 .MultiStepWizard{
-    height: 100vh;
+    height: auto;
     width: 100%;
     position: relative;
 }
 
 .PromptBox{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 55px;
+}
+.NextButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.NextButton{
-    width:90%
-}
 
 @media (min-width:768px) {
     .NextButton{

@@ -1,14 +1,17 @@
 import React, {useState} from "react";
 import style from "./InsuranceCard.module.css";
 
-const InsuranceCard = ({title , image})=>{
+const InsuranceCard = ({title , image, onCheck})=>{
     const [selected, setSelected] = useState(false);
 
     const handleSelect = () => {
         setSelected(!selected);
+        onCheck(!selected);
     }
     return (
-        <div className={style.InsuranceCard} onClick={handleSelect}>
+        <div 
+            className={`${style.InsuranceCard} ${selected ? style.selected : ""}`} 
+            onClick={handleSelect}>
             <div className={style.InsuranceCardImage}>
                 <img src={image} alt=""/>
             </div>
