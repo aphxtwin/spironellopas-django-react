@@ -1,23 +1,25 @@
 import React from "react";
-import NextPreviousButton from "../../Buttons/NextPrevButton/NextPrevButton";
+import StepButton from "../../Buttons/StepButton/StepButton";
 import style from "./ProgressBar.module.css";
 
-const ProgressBar = ({formValid,nextStep,lastStep}) => {
-    
+const ProgressBar = ({formValid,onNext,onPrev}) => {
+
+
     return (
         <div className={style.ProgressBar}>
-            <NextPreviousButton
-                To={lastStep} 
+            <StepButton
                 customClassName={style.PrevButton} 
-                Direction={'previous'} />
-            <NextPreviousButton
-                Direction={'next'}
-                To={nextStep} 
+                Direction={'previous'}
+                onClick={onPrev}
+            />
+            <StepButton
+                type='next'
                 customClassName={
-                    formValid 
+                    formValid
                         ? style.NextButton
-                        : style.disabledNextButton
-                    } 
+                        : style.NextButtonDisabled
+                }
+                onClick={onNext}
             />
         </div>
     );

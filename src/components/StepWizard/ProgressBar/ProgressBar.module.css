@@ -9,15 +9,7 @@
     border-radius: 5px;
 }
 
-.NextButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-
-.disabledNextButton{
+.NextButtonDisabled{
     cursor: not-allowed;
     color: gray;
     border-color: gray;
