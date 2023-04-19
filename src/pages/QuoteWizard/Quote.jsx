@@ -5,7 +5,9 @@ import ProductSelect from "../../components/StepWizard/Forms/ProductSelect/Produ
 import ProgressBar from "../../components/StepWizard/ProgressBar/ProgressBar"; 
 import style from "./Quote.module.css";
 import FormCarInsurance from "../../components/StepWizard/Forms/FormCarInsurance/FormCarInsurance";
-import FormHouseInsurance from "../../components/StepWizard/Forms/FormHouseInsurance/FormHouseInsurance";
+import FormLifeInsurance from "../../components/StepWizard/Forms/FormLifeInsurance/FormLifeInsurance";
+import PersonalDataForm from "../../components/StepWizard/Forms/PersonalDataForm/PersonalDataForm";
+import SubmitForms from "../../components/StepWizard/Forms/SubmitForms/SubmitForms";
 import { useNavigate } from "react-router-dom";
 
 const Quote = () => {
@@ -13,29 +15,55 @@ const Quote = () => {
     const [isValid,setFormValid] = useState(false);
     const [selectedProducts, setSelectedProducts] = useState([]);
     const [currentStep, setCurrentStep] = useState(0);
-    
+    const [currentProductIndex, setCurrentProductIndex] = useState(0)
+    // this is used to navigate back to the previous page
     const navigate = useNavigate();
 
     const handleFormValidation = (isValid) => {
         setFormValid(isValid);
-    }
+    };
+
     const handleProductSelection = (selected) => {
         setSelectedProducts(selected);
-    }
+    };
+
+    const getCurrentForm = () => {
+        if (currentStep === 1 && selectedProducts.length > 0){
+            const currentProduct = selectedProducts[currentProductIndex];
+            switch (currentProduct){
+                case "auto":
+                    return <FormCarInsurance/>;
+                case "vida":
+                    return <FormLifeInsurance/>;
+                default:
+                    return null;
+            }
+        }
+        return null;
+    };
     const handleNextStep = () => {
         if (isValid){
             // if the form is valid then go to the next step
-            setCurrentStep(currentStep + 1);
+            if (currentStep === 1 && currentProductIndex < selectedProducts.length - 1){
+                setCurrentProductIndex(currentProductIndex + 1);
+            } else{
+                setCurrentStep(currentStep + 1);
+            } 
         }
-    }
+    };
     const handlePrevStep = () => {
         if (currentStep > 0){
             // if the form is valid then go to the next step
-            setCurrentStep(currentStep - 1);
+            if (currentStep === 1 && currentProductIndex > 0){
+                setCurrentProductIndex(currentProductIndex - 1);
+            } else{
+                setCurrentStep(currentStep - 1);
+            }
+            
         } else{
             navigate(-1)
         }
-    }
+    };
 
     
 
@@ -45,7 +73,7 @@ const Quote = () => {
             <div className={style.PromptBox}>
                 <Prompt
                     prompt={"Hola soy Ivo, ¿Qué tipo de seguro buscas?"}
-                    subprompt={"Selecciona"}
+                    subprompt={"Selecciona el tipo de seguro que necesitas, luego presiona la flecha para continuar."}
                 />        
                 <ProgressBar 
                     formValid={isValid}
@@ -59,18 +87,19 @@ const Quote = () => {
                     onProductSelection={handleProductSelection}
                     />
                 }
-                {currentStep === 1 && selectedProducts.includes('auto') && (
-                    <FormCarInsurance
-                    />
+                {currentStep === 1 && (
+                    getCurrentForm()
                 )}
-                {currentStep === 1 && selectedProducts.includes('vida') && (
-                    <FormHouseInsurance
-                    />
-                )
-                }
+                {currentStep === 2 && (
+                    <PersonalDataForm/>
+                )}
+                {currentStep === 3 && (
+                    <SubmitForms/>
+                )}
             </div>
         </div>
     );
-}
+};
+
 
 export default Quote;
