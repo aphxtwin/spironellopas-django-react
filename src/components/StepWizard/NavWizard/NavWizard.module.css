@@ -10,7 +10,7 @@
     width: 100%;
     border-bottom: 1px solid rgba(201, 201, 201, 0.606);
     height: 2.3rem;
-    
+    z-index: 100;
 }
 .NavigationOptions{
     margin-left:0.5rem;

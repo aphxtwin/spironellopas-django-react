@@ -10,7 +10,8 @@ const FormCarInsurance = () => {
             <TextInput label="modelo" type="text" placeholder="First Name" />
             <TextInput label="marca" type="text" placeholder="Last Name" />
             <TextInput label="ano" type="text" placeholder="Email" />
-            <Checkbox label="tiene gnc?" />
+            <Checkbox label="tiene gnc?"/>
+            <Checkbox/>
         </div>
     );
 }

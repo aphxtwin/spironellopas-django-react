@@ -1,4 +1,6 @@
 import React from "react";
+import TextInput from '../../../FormsToolbox/TextInput/TextInput';
+import Checkbox from '../../../FormsToolbox/Checkbox/Checkbox';
 import style from './FormLife.module.css';
 
 const FormLifeInsurance = () => {

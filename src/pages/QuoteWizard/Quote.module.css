@@ -25,4 +25,7 @@
         width: 20%;
         margin-top: 20px;
     }
+    .ProgressBar{
+        width: 90%;
+    }
 }

@@ -1,11 +1,18 @@
-import React from "react";
-import style from "./Checkbox.module.css";
+import React from 'react';
 
-const Checkbox = ({label}) => {
-    return (
-        <div className={style.Checkbox}>
-            <input label={label} type="checkbox" />
-        </div>
-    );
-}
+const Checkbox = ({ label, name, checked, onChange }) => {
+  return (
+    <div>
+      <label htmlFor={name}>{label}</label>
+      <input
+        type="checkbox"
+        name={name}
+        id={name}
+        checked={checked}
+        onChange={onChange}
+      />
+    </div>
+  );
+};
+
 export default Checkbox;
