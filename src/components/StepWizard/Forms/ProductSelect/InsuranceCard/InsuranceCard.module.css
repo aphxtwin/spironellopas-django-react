@@ -57,14 +57,17 @@
 
 @media (min-width:768px) {
     .InsuranceCard{
-        width: 240px;
-        height: 330px;
+        width: 180px;
+        height: 250px;
+    }
+    .InsuranceCard img{
+        height: 150px;
     }
     .InsuranceCardImage {
         height: 200px;
     }
     .InsuranceCardTitle{
-        font-size: 1rem;
+        font-size: 15px;
         height: 30px;
         margin-bottom: 0.5rem;
     }
@@ -78,6 +81,6 @@
     .SelectedCheckBox input[type="checkbox"] {
         height: 35px;
         width: 35px;
-      }
+    }
 
 }

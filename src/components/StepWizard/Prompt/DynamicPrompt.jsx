@@ -18,14 +18,18 @@ const DynamicPrompt = ({selectedProducts, currentStep, currentProductIndex}) =>{
                 prompt: "Formulario de seguro de vida",
                 subprompt: "Complete los detalles de su seguro de vida.",
             },
+            Integral_de_comercio: {
+                prompt:"Formulario de integral de comercio",
+                subprompt: "Complete los detalles de su seguro de integral de comercio"
+            }
         },
         {
             prompt: "Información personal",
             subprompt: "Complete sus datos personales.",
         },
         {
-            prompt: "Enviar formularios",
-            subprompt: "Revise y envíe sus formularios.",
+            prompt: "Listo!",
+            subprompt: "Ahora solo resta enviar los formularios. Recorda que podes revisarlos antes",
         },
     ];
 

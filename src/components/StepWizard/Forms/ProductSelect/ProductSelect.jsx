@@ -30,13 +30,14 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
 
   // Handle card selection
   const handleCardSelection = (productTitle, isSelected) => {
+    const formatTitle = productTitle.replace(/ /g , "_" )
     if (isSelected) {
       // Add the product title to the selected products array
-      setSelectedProducts((prevSelected) => [...prevSelected, productTitle]);
+      setSelectedProducts((prevSelected) => [...prevSelected, formatTitle]);
     } else {
       // Remove the product title from the selected products array
       setSelectedProducts((prevSelected) =>
-        prevSelected.filter((title) => title !== productTitle)
+        prevSelected.filter((title) => title !== formatTitle)
       );
     }
   };

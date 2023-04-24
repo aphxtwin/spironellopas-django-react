@@ -1,5 +1,36 @@
 .TextInput{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
 }
+
+.TextInput label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #484848;
+    margin-bottom: 1px;
+  }
+
+/* TextInput input */
+.TextInput input {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* TextInput input:focus */
+  .TextInput input:focus {
+    border-color: #0015ff;
+    box-shadow: 0 0 0 1px #2b00ff72;
+  }
+  
+  /* TextInput input::placeholder */
+  .TextInput input::placeholder {
+    color: #767676;
+  }

@@ -1,8 +1,9 @@
 import React from 'react';
+import style from './TextInput.module.css'
 
 const TextInput = ({ label, name, placeholder, value, onChange }) => {
   return (
-    <div>
+    <div className={style.TextInput}>
       <label htmlFor={name}>{label}</label>
       <input
         type="text"
