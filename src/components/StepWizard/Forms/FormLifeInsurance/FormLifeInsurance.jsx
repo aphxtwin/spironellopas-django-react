@@ -1,18 +1,23 @@
 import React from "react";
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import style from './FormLife.module.css';
-
+import DateOfBirth from "../../../FormsToolbox/DateOfBirth/DateOfBirth";
 const FormLifeInsurance = () => {
     return (
         <div className={style.FormLifeInsurance}>
             <form>
                 <TextInput
-                    label={"Edad"}
-                    name={"Edad"}
+                    label={"Nombre"}
+                    name={"Nombre"}
                 />
                 <TextInput
-                    label={'Nombre'}
+                    label={'Apellido'}
+                    name={'Apellido'}
                 />
+                <DateOfBirth
+                    label='Fecha de Nacimiento'
+                />
+
             </form>
         </div>
     );

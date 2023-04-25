@@ -5,7 +5,6 @@ import ProgressBar from "../../components/StepWizard/ProgressBar/ProgressBar";
 import style from "./Quote.module.css";
 import FormWizardContent from "../../components/StepWizard/FormWizardContent/FormWizardContent";
 import useFormWizard from "../../hooks/useFormWizard/useFormWizard";
-import AnteriorButton from "../../components/Buttons/AnteriorButton/AnteriorButton";
 import BlockAnterior from "../../components/StepWizard/Anterior/BlockAnterior";
 const Quote = () => {
     
@@ -27,13 +26,14 @@ const Quote = () => {
         <div className={style.MultiStepWizard}>
             <NavWizard/>
             <div className={style.PromptBox}>
-            
+
             {notShow && <BlockAnterior onclick={handlePrevStep}/> }
             <DynamicPrompt
                 selectedProducts={selectedProducts}
                 currentStep={currentStep} 
                 currentProductIndex={currentProductIndex}
             />
+            
             {!notShow &&
                 <ProgressBar
                 customClassName={style.ProgressBar}

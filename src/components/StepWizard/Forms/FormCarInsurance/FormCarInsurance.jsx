@@ -8,7 +8,7 @@ const FormCarInsurance = () => {
         <div className={style.FormCarInsurance}>
             <TextInput label="Marca" type="text" placeholder="Marca" />
             <TextInput label="Modelo" type="text" placeholder="Modelo del auto" />
-            <TextInput label="Año" type="text" placeholder="Año" />
+            <TextInput label="Año" type="number" placeholder="Año" />
             <YesNoRadio label={"Tiene GNC?"}/>
             <YesNoRadio label={"Es 0km?"}/>
         </div>
