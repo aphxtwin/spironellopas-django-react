@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
 const useFormWizard = (selectedProducts) => {
@@ -7,11 +7,16 @@ const useFormWizard = (selectedProducts) => {
     const [currentStep, setCurrentStep] = useState(0);
     const [currentProductIndex, setCurrentProductIndex] = useState(0)
 
+
     const navigate = useNavigate();
 
     const handleFormValidation = (isValid) => {
         setFormValid(isValid);
     };
+
+    const handleStoreData = (data) =>{
+        console.log(data)
+    }
 
     const handleNextStep = () => {
         if (isValid && currentStep < 3){
@@ -22,6 +27,23 @@ const useFormWizard = (selectedProducts) => {
             } 
         }
     };
+
+
+    useEffect(()=>{
+        const handleEnterKey = (e) =>{
+            if (e.key === 'Enter'){
+                e.preventDefault();
+                handleNextStep();
+            };
+        };
+
+        window.addEventListener('keydown', handleEnterKey)
+
+        return ()=>{
+            window.removeEventListener('keydown',handleEnterKey)
+        };
+
+    },[handleNextStep]);
 
     const handlePrevStep = () => {
         if (currentStep > 0){

@@ -4,6 +4,7 @@ import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import YesNoRadio from "../../../FormsToolbox/RadioButton/YesNoRadio";
 
 const FormCarInsurance = () => {
+
     return (
         <div className={style.FormCarInsurance}>
             <TextInput label="Marca" type="text" placeholder="Marca" />
@@ -14,4 +15,5 @@ const FormCarInsurance = () => {
         </div>
     );
 }
+
 export default FormCarInsurance;

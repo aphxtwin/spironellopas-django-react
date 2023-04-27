@@ -1,21 +1,21 @@
 import React from "react";
 import SocialLinks from "../../Common/SocialLinks/SocialLinks";
 import style from "./NavItems.module.css"
-const NavItems = ({ social=true }) => {    
+const NavItems = ({ social=true, }) => {    
     
     return(
-        <ul>
+        <ul >
             <li className={style.NavItem}>
-                home
+                INICIO
             </li>
             <li className={style.NavItem}>
-                about
+                EXPLORAR PRODUCTOS
             </li>
             <li className={style.NavItem}>
-                services
+                RECURSOS
             </li>
             <li className={style.NavItem}>
-                contact
+                DENUNCIAS
             </li>
             {social && 
                 <li className={style.NavbarSocial}>

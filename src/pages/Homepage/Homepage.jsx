@@ -9,7 +9,7 @@ const Homepage = () => {
         <div className="home-container">
             <Navbar/>
             <HomePageHeader 
-                title={"El Seguro Que conviene"} 
+                title={"El Seguro Que Conviene"} 
                 subtitle={"Protección instantánea. Unidos por tus intereses."}
             />
             <Footer/>

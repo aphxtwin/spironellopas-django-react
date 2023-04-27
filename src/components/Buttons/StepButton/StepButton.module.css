@@ -1,6 +1,6 @@
 .StepButton{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 3rem;
     height: 2.5rem;
@@ -15,3 +15,10 @@
     box-shadow: inset 0 0 0 2.5px rgb(64, 64, 64);   
 }
 
+
+@media (min-width: 768px){
+    .StepButton{
+        height: 3rem;
+        width: 3.8rem;
+    }
+}
