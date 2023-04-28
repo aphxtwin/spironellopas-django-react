@@ -7,6 +7,7 @@ import NavMenu from "./NavMenu/NavMenu";
 import NavItems from "./NavItems/NavItems";
 // Logo
 import logo_white from "../../assets/images/logo-white-svg.svg";
+import logo_black from "../../assets/images/logo-black.svg"
 import Logo from "../Common/Logo";
 
 
@@ -16,7 +17,7 @@ const Navbar = () => {
     
     useEffect(() =>{
         const handleScroll = ()=>{
-            const headerCTA = document.querySelector(".main-cta-button a");
+            const headerCTA = document.querySelector("main a");
             if (headerCTA){
                 const ctaOffset = headerCTA.getBoundingClientRect().top + window.scrollY;
                 if (window.scrollY > ctaOffset){
@@ -42,7 +43,13 @@ const Navbar = () => {
         <nav>
             <div className={styles.navbarContainer}>
                 <div className={styles.logoContainer}>
-                    <Logo logoType={logo_white} />                                            
+                    <div className={styles.logoDesktop}>
+                        <Logo logoType={logo_black} /> 
+                    </div>
+                    <div className={styles.logoPhone}>
+                        <Logo logoType={logo_white} />
+                    </div>
+                                                                
                     <CallToAction 
                         customClass={customClassName}
                         textButton={showCta ? 'COTIZA AHORA': ''}

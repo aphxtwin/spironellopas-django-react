@@ -1,0 +1,13 @@
+.buttonContainer{
+    padding-top: 1rem;
+}
+
+@media (min-width:768px){
+    .buttonContainer{
+        padding-top: 1.5rem;
+    }
+    .CtaButton{
+        width: 12rem;
+        height: 3rem;
+    }
+}

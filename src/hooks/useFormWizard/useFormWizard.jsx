@@ -14,9 +14,7 @@ const useFormWizard = (selectedProducts) => {
         setFormValid(isValid);
     };
 
-    const handleStoreData = (data) =>{
-        console.log(data)
-    }
+
 
     const handleNextStep = () => {
         if (isValid && currentStep < 3){

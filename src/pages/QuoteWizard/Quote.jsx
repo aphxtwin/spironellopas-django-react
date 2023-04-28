@@ -19,6 +19,7 @@ const Quote = () => {
         handlePrevStep,
     } = useFormWizard(selectedProducts);
 
+    // This variable is the condition when the progress bar don't have to be shown
     const notShow = currentStep === 3
     
 
