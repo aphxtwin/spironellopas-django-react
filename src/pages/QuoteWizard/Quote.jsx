@@ -27,33 +27,30 @@ const Quote = () => {
         <div className={style.MultiStepWizard}>
             <NavWizard/>
             <div className={style.PromptBox}>
-
-            {notShow && <BlockAnterior onclick={handlePrevStep}/> }
-            <DynamicPrompt
-                selectedProducts={selectedProducts}
-                currentStep={currentStep} 
-                currentProductIndex={currentProductIndex}
-            />
-            
-            {!notShow &&
-                <ProgressBar
-                customClassName={style.ProgressBar}
-                formValid={isValid}
-                onNext={handleNextStep}
-                onPrev={handlePrevStep}
+                {notShow && <BlockAnterior onclick={handlePrevStep}/> }
+                <DynamicPrompt
+                    selectedProducts={selectedProducts}
+                    currentStep={currentStep} 
+                    currentProductIndex={currentProductIndex}
                 />
-            }
-
-
-            <FormWizardContent
-                currentStep={currentStep}
-                currentProductIndex={currentProductIndex}
-                selectedProducts={selectedProducts}
-                onFormValidation={handleFormValidation}
-                onProductSelection={(selected)=>{
-                    setSelectedProducts(selected);
-                }}
-            />
+                
+                {!notShow &&
+                    <ProgressBar
+                    customClassName={style.ProgressBar}
+                    formValid={isValid}
+                    onNext={handleNextStep}
+                    onPrev={handlePrevStep}
+                    />
+                }
+                <FormWizardContent
+                    currentStep={currentStep}
+                    currentProductIndex={currentProductIndex}
+                    selectedProducts={selectedProducts}
+                    onFormValidation={handleFormValidation}
+                    onProductSelection={(selected)=>{
+                        setSelectedProducts(selected);
+                    }}
+                />
             </div>
         </div>
     );

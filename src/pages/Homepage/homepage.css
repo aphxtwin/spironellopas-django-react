@@ -5,18 +5,18 @@ main{
     gap: 0.3rem;
     align-items: center;
     /* background:linear-gradient(180deg, #8e77f5f9 67.71%, rgba(0, 5, 109, 0) 100%); */
-    background-color: rgba(202, 215, 232, 0.268);
+    background-color: rgba(205, 203, 233, 0.515);
     height: 30rem;
     /* color: white; */
-    color: rgb(59, 58, 58);
     padding: 1.5rem 1rem 0.2rem 1rem;
     text-align: center;
     margin-top: 3.3rem;
 }
 main h1{
-    font-family: 'Utopia-BoldOsF';
+    font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
     line-height: 4rem;
+    color: rgb(55, 55, 55);
     margin: 0;
     padding: 0;
     text-shadow: 1px 1px 1px rgb(53, 53, 53);
@@ -26,16 +26,15 @@ main p{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
+    color: rgb(124, 124, 124);
     margin: 0;
     padding: 0;
     margin-top: 1rem;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.328);
 }
 .main-cta-button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.3rem
 }
 .main-cta-button .CtaButton{
     display: flex;
@@ -50,7 +49,6 @@ main p{
         font-size: 4.5rem;
     }
     main p{
-        color: rgb(124, 124, 124);
         font-size: 1.7rem;
         font-size: 500;
     }

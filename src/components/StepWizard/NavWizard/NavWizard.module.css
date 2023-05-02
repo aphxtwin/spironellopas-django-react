@@ -23,18 +23,20 @@
     width: 100%;
     height: 2.3rem;
 }
+.ThreeBarsIcon {
+    color: gray;
+}
 
 .NavWizardMenu{
-    top: 2.3rem;
-    position: fixed;
     display: flex;
     flex-direction: column;
     z-index: 1;
+    padding-right: 0.5rem;
 }
-.NavWizardIcon{
-    display: none;
+.MenuWizard{
+    right: 2px;
+    
 }
-
 
 @media (min-width:768px) {
     .NavWizardIcon{
@@ -42,9 +44,11 @@
     }
     .NavWizardMenu{
         display: flex;
-        width: 50vh;
     }
     .MenuIcon{
-        display:flex
+        display:flex;
+    }
+    .MenuWizard{
+        width: 30%;
     }
 }

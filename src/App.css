@@ -4,9 +4,7 @@
   font-family: 'Utopia-BoldOsF';
   src:local('Utopia'), url('./assets/fonts/Utopia/Utopia-BoldOsF.otf') format('opentype');
 };
-body{
-  overflow-x: hidden;
-}
+
 
 
 

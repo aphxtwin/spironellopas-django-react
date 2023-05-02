@@ -3,10 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     width: 75%;
-    padding: 3px 12px 3px 12px;
-    border: 2px solid rgb(30, 30, 30);
-    background-color: rgb(205, 196, 255);
-    border-radius: 5px;
+    padding: 11px 15px 11px 15px;
+    background-color: rgba(200, 200, 223, 0.53);
+    border-radius: 30px;
 }
 
 .NextButtonDisabled{

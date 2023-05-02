@@ -1,7 +1,7 @@
 nav{
     height: 3.3rem;
     max-height: 3.3rem;
-    background-color: #000000;
+    background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@ nav{
     align-items: center;
     gap: 0.5rem;
 }
-.logoPhone img{
+.logoContainer img{
     width: 50px;
     height: 50px;
 }
@@ -31,7 +31,7 @@ nav{
 .navbarDesktop{
     display: none;
 }
-.navbarDesktop ul{
+.NavItems{
     display: none;
 }
 .CtaNavbar {
@@ -57,6 +57,13 @@ nav{
 }
 .logoDesktop{
     display: none;
+}
+
+@media (min-width:768px) and (max-width:950px) {
+    .navbarDesktop .NavItems{
+        margin-left: 10rem;
+    }
+    
 }
 
 @media (min-width:768px) {
@@ -87,7 +94,7 @@ nav{
         align-items: center;
         padding: 0;
     }
-    .navbarDesktop ul{
+    .NavItems{
         display:flex;
         list-style: none;
         font-size: 0.8rem;
@@ -99,7 +106,9 @@ nav{
         margin-right:1rem ;
         color: rgb(45, 45, 45);
     }
-
+    .NavItem{
+        height: 1rem;
+    }
     .CtaNavbar{
         width: 8rem;
         height: 2rem;
@@ -113,18 +122,4 @@ nav{
         display: none;
     }
 
-}
-
-@media screen and (min-width:768px) and (max-width:824px) {
-
-    .navbarDesktop ul{
-        margin-left: 10rem;
-    }
-}
-
-@media screen and (min-width:824px) and (max-width:960px) {
-
-    .navbarDesktop ul{
-        margin-left: 5rem;
-    }
 }

@@ -4,15 +4,15 @@
     align-items: center;
     width: 3rem;
     height: 2.5rem;
-    color: rgb(85, 85, 85);
+    color: rgb(111, 111, 111);
     background-color: #ffffff;
-    border: 3.5px solid #4967ff;
+    border: 3.5px solid #ff8000;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: inset 0 0 0 2.5px rgb(64, 64, 64);   
+    box-shadow: inset 0 0 5px 1px rgb(164, 164, 164);   
 }
 
 

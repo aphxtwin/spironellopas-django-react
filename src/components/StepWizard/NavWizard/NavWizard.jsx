@@ -10,7 +10,11 @@ const NavWizard = () => {
                     <StartOver />
                 </div>
             </div>
-            <NavMenu customClassName={style.NavigationWizardMenu} customMenuClassName={style.NavWizardMenu} iconColor={'gray'}/>
+            <NavMenu 
+                customClassName={style.NavWizardMenu} 
+                customMenuClassName={style.MenuWizard}  
+                customThreeBarsName={style.ThreeBarsIcon}  
+            />
         </div>
     );
 }

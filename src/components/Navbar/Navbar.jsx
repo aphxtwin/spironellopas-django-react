@@ -1,12 +1,12 @@
 import React, {useState, useEffect } from "react";
 import CallToAction from "../Buttons/CtaButton/CallToAction";
+import navItemsStyles from './NavItems/NavItems.module.css';
 import styles from './Navbar.module.css'
 
 // NavMenu,NavItems
 import NavMenu from "./NavMenu/NavMenu";
 import NavItems from "./NavItems/NavItems";
 // Logo
-import logo_white from "../../assets/images/logo-white-svg.svg";
 import logo_black from "../../assets/images/logo-black.svg"
 import Logo from "../Common/Logo";
 
@@ -35,7 +35,7 @@ const Navbar = () => {
         } 
     },[])
 
-    const customClassName = showCta
+    const CtaNavbar = showCta
         ? `${styles.CtaNavbar} ${styles.active}`
         : styles.CtaNavbar;
 
@@ -43,23 +43,22 @@ const Navbar = () => {
         <nav>
             <div className={styles.navbarContainer}>
                 <div className={styles.logoContainer}>
-                    <div className={styles.logoDesktop}>
-                        <Logo logoType={logo_black} /> 
-                    </div>
-                    <div className={styles.logoPhone}>
-                        <Logo logoType={logo_white} />
-                    </div>
-                                                                
+                    <Logo logoType={logo_black} />
                     <CallToAction 
-                        customClass={customClassName}
-                        textButton={showCta ? 'COTIZA AHORA': ''}
+                    customClass={CtaNavbar}
+                    textButton={showCta ? 'COTIZA AHORA': ''}
                     />
-                </div>
+                </div>                          
+
                 <div className={styles.navbarMobile}>
-                    <NavMenu customClassName={styles.NavMenu} iconColor={'white'}/>
+                    <NavMenu customClassName={styles.NavMenu}/>
                 </div>
                 <div className={styles.navbarDesktop}>
-                    <NavItems social={false} />
+                    <NavItems 
+                        social={false}
+                        navItemsClass={styles.NavItems}
+                        navItemClass={styles.NavItem}
+                    />
                 </div>
             </div>
         </nav>
