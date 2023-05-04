@@ -61,7 +61,7 @@ nav{
 
 @media (min-width:768px) and (max-width:950px) {
     .navbarDesktop .NavItems{
-        margin-left: 10rem;
+        margin-left: 4rem;
     }
     
 }

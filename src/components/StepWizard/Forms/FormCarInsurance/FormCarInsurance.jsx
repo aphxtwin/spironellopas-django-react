@@ -1,29 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import style from './FormCarInsurance.module.css';
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import YesNoRadio from "../../../FormsToolbox/RadioButton/YesNoRadio";
-import { useDispatch } from "react-redux";
-import { updateProductData } from "../../../../redux/actions/formActions";
+import useProductForm from "../../../../hooks/useProductForm";
+
 
 const FormCarInsurance = () => {
-    
-    const dispatch = useDispatch();
 
-    const [formData, setFormData] = useState({
+    const [formData, handleChange] = useProductForm({
         brand: "",
         model: "",
         year: "",
         hasGNC: false,
         isNew: false,
     })
-
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFormData({...formData, [name]: value })
-
-        dispatch(updateProductData(formData))
-        console.log(formData)
-    };
+    
 
     return (
         <div className={style.FormCarInsurance}>
