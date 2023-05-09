@@ -2,23 +2,40 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 3rem;
+    width: 80%;
     height: 2.5rem;
     color: rgb(111, 111, 111);
     background-color: #ffffff;
-    border: 3.5px solid #ff8000;
+    border: 2.5px solid #ff8000;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    box-shadow: inset 0 0 5px 1px rgb(164, 164, 164);   
+    box-shadow: inset 0 0 5px 1px rgb(164, 164, 164);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;    
 }
 
 
-@media (min-width: 768px){
-    .StepButton{
-        height: 3rem;
-        width: 3.8rem;
+.StepButton:disabled{
+    cursor: not-allowed;
+    color: gray;
+    border-color: rgb(144, 144, 144);
+    background-color: rgb(222, 222, 222);
+}
+.StepButton:disabled:hover{
+    cursor: not-allowed;
+    color: gray;
+    border-color: rgb(144, 144, 144);
+    background-color: rgb(222, 222, 222);
+    box-shadow: inset 0 0 5px 1px rgb(144, 144, 144);
+}
+
+@media (min-width:768px) {
+    .StepButton:hover{
+        color: #ffffff;
+        background-color: #ff8000;
+        border-color: #ff8000;
+        box-shadow: inset 0 0 5px 1px rgba(255, 128, 0, 0.5); /* Add hover effect */
     }
 }

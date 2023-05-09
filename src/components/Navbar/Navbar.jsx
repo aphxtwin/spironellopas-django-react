@@ -1,6 +1,5 @@
 import React, {useState, useEffect } from "react";
 import CallToAction from "../Buttons/CtaButton/CallToAction";
-import navItemsStyles from './NavItems/NavItems.module.css';
 import styles from './Navbar.module.css'
 
 // NavMenu,NavItems
@@ -14,10 +13,10 @@ import Logo from "../Common/Logo";
 const Navbar = () => {
     // CTA = Call To Action Button
     const [showCta, setShowCta] = useState(false);
-    
     useEffect(() =>{
-        const handleScroll = ()=>{
-            const headerCTA = document.querySelector("main a");
+        const handleScroll = ()=> {
+            const headerCTA = document.querySelector("#mainCTA");
+            console.log(headerCTA)
             if (headerCTA){
                 const ctaOffset = headerCTA.getBoundingClientRect().top + window.scrollY;
                 if (window.scrollY > ctaOffset){
@@ -58,7 +57,14 @@ const Navbar = () => {
                         social={false}
                         navItemsClass={styles.NavItems}
                         navItemClass={styles.NavItem}
+                        links={[
+                            { text: "INICIO", href: "/" },
+                            { text: "PRODUCTOS", href: "/productos" },
+                            { text: "RECURSOS", href: "/recursos" },
+                            { text: "DENUNCIAS", href: "/denuncias" },
+                        ]}
                     />
+
                 </div>
             </div>
         </nav>

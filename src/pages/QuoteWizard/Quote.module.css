@@ -17,20 +17,40 @@
     align-items: center;
     padding-top: 55px;
 }
-.NextButton{
+
+
+.FormBox{
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.StepButtonFixed{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
     cursor: pointer;
+    font-size: 20px;
+    color: rgb(81, 81, 81);
 }
 
 
+
+
 @media (min-width:768px) {
-    .NextButton{
-        width: 20%;
+    .StepButtonFixed{
+        display: inline-block;
+        width: 25%;
         margin-top: 20px;
     }
-    .ProgressBar{
-        width: 90%;
+    .StepButtonPrev {
+        left: 50%;
+        transform: translateX(-75%);
     }
+
+    .AnteriorButton{
+        position: fixed;
+        left: 15px;
+        top: 45%;
+    }
+
 }

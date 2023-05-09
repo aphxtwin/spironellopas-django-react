@@ -14,6 +14,7 @@ const useFormWizard = (selectedProducts) => {
         setFormValid(isValid);
     };
 
+    // This function will be called when the user clicks the browser's back button
 
 
     const handleNextStep = () => {
@@ -25,24 +26,6 @@ const useFormWizard = (selectedProducts) => {
             } 
         }
     };
-
-
-    useEffect(()=>{
-        const handleEnterKey = (e) =>{
-            if (e.key === 'Enter'){
-                e.preventDefault();
-                handleNextStep();
-            };
-        };
-
-        window.addEventListener('keydown', handleEnterKey)
-
-        return ()=>{
-            window.removeEventListener('keydown',handleEnterKey)
-        };
-
-    },[handleNextStep]);
-
     const handlePrevStep = () => {
         if (currentStep > 0){
             if (currentStep === 1 && currentProductIndex > 0){
@@ -55,6 +38,11 @@ const useFormWizard = (selectedProducts) => {
             navigate(-1)
         }
     };
+
+
+
+
+
 
     return {
         isValid,

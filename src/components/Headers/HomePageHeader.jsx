@@ -10,7 +10,8 @@ const HomePageHeader = ({title, subtitle}) => {
                 {subtitle}
             </p>
             <div className={style.buttonContainer}>        
-                <CallToAction 
+                <CallToAction
+                    id={'mainCTA'}
                     customClass={style.CtaButton}
                     textButton={"COTIZA AHORA!"} 
                 />

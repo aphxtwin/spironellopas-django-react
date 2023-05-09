@@ -8,13 +8,13 @@ import { Link } from "react-router-dom";
 
 */
 
-const CallToAction = ({ textButton='COTIZA AHORA', customClass,  To='/cotizacion'}) => {
+const CallToAction = ({ textButton='COTIZA AHORA', customClass, id, To='/cotizacion'}) => {
     const ButtonClassName = 
         `${styles.CtaButton} ${customClass ? customClass : ''}`;
     
     return(
         <>    
-            <Link to={To} className={ButtonClassName}>
+            <Link to={To} id={id ? id : ''} className={ButtonClassName}>
                 {textButton}
             </Link>
         </>         

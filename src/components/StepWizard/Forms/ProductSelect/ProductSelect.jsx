@@ -43,8 +43,7 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
   };
 
   return (
-    <>
-
+    <div className={style.ProductForm}>
         <div className={isLoading ? style.Loading : style.ProductSelect}>
         {isLoading ? (
           <LoadingSpinner />
@@ -62,7 +61,7 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 };
 

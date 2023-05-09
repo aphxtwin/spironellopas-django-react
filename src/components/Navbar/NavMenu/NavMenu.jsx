@@ -51,7 +51,15 @@ const NavMenu = ({customClassName, customMenuClassName, customThreeBarsName }) =
                         menuOpen && <MenuIcon menuOpen={menuOpen} onClick={handleClick} menuButtonRef={menuButtonRef}/>
                     }
                 </div>
-                <NavItems navItemsClass={style.NavItems}/>
+                <NavItems 
+                    navItemsClass={style.NavItems}
+                    links={[
+                        { text: "INICIO", href: "/" },
+                        { text: "PRODUCTOS", href: "/productos" },
+                        { text: "RECURSOS", href: "/recursos" },
+                        { text: "DENUNCIAS", href: "/denuncias" },
+                    ]}
+                />
             </div>
         </div> 
     )

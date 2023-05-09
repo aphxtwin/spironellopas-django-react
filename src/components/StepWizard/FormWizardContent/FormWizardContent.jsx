@@ -5,6 +5,8 @@ import FormIntegralDeComercio from "../Forms/FormIntegralDeComercio/FormIntegral
 import FormLifeInsurance from "../Forms/FormLifeInsurance/FormLifeInsurance";
 import PersonalDataForm from "../Forms/PersonalDataForm/PersonalDataForm";
 import SubmitForms from "../Forms/SubmitForms/SubmitForms";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 
 const FormWizardContent = (
     {

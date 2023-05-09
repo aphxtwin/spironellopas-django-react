@@ -7,34 +7,33 @@ import useProductForm from "../../../../hooks/useProductForm";
 const FormLifeInsurance = () => {
     
     const [formData, handleChange] = useProductForm({
+
         name: "",
         last_name: "",
         date_of_birth: "",
     });
 
     return (
-        <div className={style.FormLifeInsurance}>
-            <form>
-                <TextInput
-                    label={"Nombre"}
-                    name={"name"}
-                    value={formData.name}
-                    onChange={handleChange}
-                />
-                <TextInput
-                    label={'Apellido'}
-                    name={'last_name'}
-                    value={formData.last_name}
-                    onChange={handleChange}
-                />
-                <DateOfBirth
-                    label='Fecha de Nacimiento'
-                    name='date_of_birth'
-                    value={formData.date_of_birth}
-                    onChange={handleChange}
-                />
-            </form>
-        </div>
+    <form className={style.FormLifeInsurance}>
+        <TextInput
+            label={"Nombre"}
+            name={"name"}
+            value={formData.name}
+            onChange={handleChange}
+        />
+        <TextInput
+            label={'Apellido'}
+            name={'last_name'}
+            value={formData.last_name}
+            onChange={handleChange}
+        />
+        <DateOfBirth
+            label='Fecha de Nacimiento'
+            name='date_of_birth'
+            value={formData.date_of_birth}
+            onChange={handleChange}
+        />
+    </form>
     );
 }
 

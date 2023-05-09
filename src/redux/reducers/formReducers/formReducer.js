@@ -1,7 +1,7 @@
 const initialState = {
     formData : {
         personalData : {},
-        productData: {}
+        productData: []
     }
 }
 
@@ -12,7 +12,7 @@ const formReducer = (state = initialState, action) => {
                 ...state,
                 formData: {
                     ...state.formData,
-                    productData: action.payload,
+                    productData: [...state.formData.productData, action.payload],
                 },
             };
         case "UPDATE_PERSONAL_DATA":

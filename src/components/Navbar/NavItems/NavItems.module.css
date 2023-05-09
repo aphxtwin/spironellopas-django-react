@@ -1,9 +1,15 @@
 
 .NavItem{
     display: flex;
-    height: 2rem;
-}
+    height: 1rem;
+    text-decoration: none;
 
+}
+.NavItem a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
 .NavbarSocial{
     display: flex;
     flex-direction: row;

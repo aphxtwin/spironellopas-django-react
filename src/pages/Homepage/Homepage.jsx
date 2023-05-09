@@ -8,7 +8,7 @@ const Homepage = () => {
     return (
         <div className="home-container">
             <Navbar/>
-            <HomePageHeader 
+            <HomePageHeader
                 title={"El Seguro Que Conviene"} 
                 subtitle={"Protección instantánea. Unidos por tus intereses."}
             />

@@ -1,21 +1,16 @@
 import React from "react";
 import styles from './StepButton.module.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 
-const StepButton = ({ customClassName, textButton, type,onClick}) => {
-  const isNext = type === "next";
-  const icon = isNext ? faArrowRight : faArrowLeft;
-  
+const StepButton = ({ textButton, formValid, onClick, customClassName}) => {
 
   return (
     <button 
-      className={`${styles.StepButton} ${customClassName || ""}`} 
+      className={`${styles.StepButton} ${customClassName}`}
       onClick={onClick}
+      disabled={!formValid}
     >
       {textButton || ""}
-      <FontAwesomeIcon icon={icon} />
     </button>
   );
 }

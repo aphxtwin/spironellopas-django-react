@@ -31,18 +31,7 @@ main p{
     padding: 0;
     margin-top: 1rem;
 }
-.main-cta-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.main-cta-button .CtaButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 13rem;
-    height: 3.5rem;
-}
+
 
 @media (min-width: 768px) {
     main h1{
