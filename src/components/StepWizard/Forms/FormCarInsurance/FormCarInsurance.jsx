@@ -6,15 +6,17 @@ import useProductForm from "../../../../hooks/useProductForm";
 
 
 const FormCarInsurance = () => {
-
-    const [formData, handleChange] = useProductForm({
+    const initialState={
         brand: "",
         model: "",
         year: "",
         hasGNC: false,
         isNew: false,
-    })
+    }
+    const productName='SeguroDeAuto'
+
     
+    const [formData, handleChange] = useProductForm(initialState,productName);
 
     return (
         <div className={style.FormCarInsurance}>

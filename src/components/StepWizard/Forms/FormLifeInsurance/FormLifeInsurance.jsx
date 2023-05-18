@@ -1,24 +1,26 @@
 import React from "react";
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import style from './FormLife.module.css';
+
 import DateOfBirth from "../../../FormsToolbox/DateOfBirth/DateOfBirth";
 import useProductForm from "../../../../hooks/useProductForm";
 
 const FormLifeInsurance = () => {
-    
-    const [formData, handleChange] = useProductForm({
-
+    const initialState={
         name: "",
         last_name: "",
         date_of_birth: "",
-    });
+    }
+    const productName='SeguroDeVida'
+
+    const [formData, handleChange] = useProductForm(initialState,productName);
 
     return (
-    <form className={style.FormLifeInsurance}>
+    <form className={style.FormLifeInsurance} >
         <TextInput
             label={"Nombre"}
             name={"name"}
-            value={formData.name}
+            value={formData.name }
             onChange={handleChange}
         />
         <TextInput

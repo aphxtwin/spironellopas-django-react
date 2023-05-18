@@ -10,6 +10,12 @@
 .Icon {
   color: #a3a3a3;
   height: 48px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+
+.AnteriorButton:hover .Icon{
+  color: #666;
+  font-weight: bold; 
 }
 
 

@@ -9,7 +9,6 @@ const PersonalDataForm = () => {
         last_name:'',
         email:'',
     })
-    
     return (
         <div>
             <form className="PersonalDataForm">

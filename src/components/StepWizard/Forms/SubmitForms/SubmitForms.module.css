@@ -1,0 +1,24 @@
+.SubmitForms{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.SubmitButton{
+    margin-top: 0.5rem;
+}
+.pibe{
+    display: none;
+    height: 300px;
+}
+
+
+@media (min-width:768px){
+    .pibe{
+        display: inline-block;
+        width: 100%;
+    }
+}

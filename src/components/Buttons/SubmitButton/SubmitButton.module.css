@@ -1,0 +1,22 @@
+.SubmitButton {
+    width: 12rem;
+    height: 2.8rem;
+    color: #ffffff;
+    border-radius: 30px;
+    background-color: #fe9941;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+.SubmitButton:hover {
+background-color: #f8852e;
+}
+  
