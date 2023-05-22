@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updatePersonalData } from '../redux/actions/formActions';
 
 const usePersonalDForm = (initialState) => {
-    const [formData, setFormData] = useState(initialState)
-    const dispatch = useDispatch()
+  const [formData, setFormData] = useState(initialState)
+  const dispatch = useDispatch()
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevFormData) => {
-          const updatedFormData = { ...prevFormData, [name]: value };
-          dispatch(updatePersonalData(updatedFormData));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
+  };
 
-          return updatedFormData;
-        });
-    };
+  useEffect(() => {
+    dispatch(updatePersonalData({ formData }));
+  }, [formData, dispatch]);
 
-    return [formData, handleChange]
-
+  return [formData, handleChange]
 };
 
-export default usePersonalDForm
+export default usePersonalDForm;

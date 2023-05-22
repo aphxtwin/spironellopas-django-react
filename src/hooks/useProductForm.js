@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateProductData } from '../redux/actions/formActions';
 
 const useProductForm = (initialState, productName) => {
-    const [formData, setFormData] = useState(initialState)
-    const dispatch = useDispatch()
+  const [formData, setFormData] = useState(initialState)
+  const dispatch = useDispatch()
 
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData((prevFormData) => {
-        const updatedFormData = { ...prevFormData, [name]: value };
-        dispatch(updateProductData({productName,formData:updatedFormData}));
-        
-        return updatedFormData;
-      });
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevFormData => ({ ...prevFormData, [name]: value }));
+  };
 
-    return [formData, handleChange]
+  useEffect(() => {
+    dispatch(updateProductData({ productName, formData }));
+  }, [formData, dispatch, productName]);
 
+  return [formData, handleChange]
 };
 
-export default useProductForm
+export default useProductForm;

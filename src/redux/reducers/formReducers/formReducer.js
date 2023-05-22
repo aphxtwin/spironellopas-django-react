@@ -26,6 +26,8 @@ const formReducer = (state = initialState, action) => {
                     personalData: action.payload,
                 },
             };
+        case "RESET_FORM_DATA":
+            return initialState
         default:
             return state
     }

@@ -1,14 +1,26 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import usePersonalDForm from "../../../../hooks/usePersonalDForm";
-import './PersonalDataForm.css' 
+import './PersonalDataForm.css'
 
 const PersonalDataForm = () => {
-    const [formData, handleChange] = usePersonalDForm({
+    const initialState={
         name: '',
         last_name:'',
         email:'',
-    })
+    }
+    const data = useSelector((state) => {
+        const formData = state.form.formData && state.form.formData.personalData;
+        return {
+          name: formData && formData.name || initialState.name,
+          last_name: formData && formData.last_name || initialState.last_name,
+          email: formData && formData.email || initialState.email,
+        };
+    });
+    const [formData, handleChange] = usePersonalDForm(data)
+
+
     return (
         <div>
             <form className="PersonalDataForm">
@@ -37,4 +49,5 @@ const PersonalDataForm = () => {
         </div>
     );
 }
+  
 export default PersonalDataForm;
