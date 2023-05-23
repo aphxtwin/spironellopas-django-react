@@ -6,7 +6,6 @@ import FormLifeInsurance from "../Forms/FormLifeInsurance/FormLifeInsurance";
 import PersonalDataForm from "../Forms/PersonalDataForm/PersonalDataForm";
 import SubmitForms from "../Forms/SubmitForms/SubmitForms";
 
-
 const FormWizardContent = (
     {
         currentStep,
@@ -15,6 +14,7 @@ const FormWizardContent = (
         onFormValidation,
         onProductSelection,
     }) => {
+
         switch (currentStep) {
             case 0:
                 return <ProductSelect onFormValidation={onFormValidation} onProductSelection={onProductSelection} />;

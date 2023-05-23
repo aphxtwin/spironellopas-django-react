@@ -33,7 +33,6 @@ const useFormWizard = (selectedProducts) => {
             } else{
                 setCurrentStep(currentStep - 1);
             }
-            
         } else{
             navigate(-1)
         }

@@ -12,7 +12,7 @@ const usePersonalDForm = (initialState) => {
   };
 
   useEffect(() => {
-    dispatch(updatePersonalData({ formData }));
+    dispatch(updatePersonalData( formData ));
   }, [formData, dispatch]);
 
   return [formData, handleChange]

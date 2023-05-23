@@ -2,25 +2,21 @@ import React, { useState, useEffect } from "react";
 import InsuranceCard from "./InsuranceCard/InsuranceCard";
 import style from "./ProductSelect.module.css";
 import LoadingSpinner from "../../../Common/LoadingSpinner/LoadingSpinner";
+import useFetchProducts from "../../../../hooks/useFetchProducts";
+import { useDispatch, useSelector } from "react-redux";
+import { addProductData, removeProductData } from "../../../../redux/actions/formActions";
 
 const ProductSelect = ({ onFormValidation, onProductSelection }) => {
-  // Declare state variables
-  const [InsuranceProducts, setProducts] = useState([]);
-  const [selectedProducts, setSelectedProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
+  
   // Get server URL
   const djangoServerURL = import.meta.env.VITE_DJANGO_SERVER_URL;
 
-  // Fetch insurance products and set state
-  useEffect(() => {
-    fetch(`${djangoServerURL}/api/cotizacion/`)
-      .then((res) => res.json())
-      .then((json) => {
-        setIsLoading(false);
-        setProducts(json);
-      });
-  }, []);
+  const selectedProducts = useSelector((state) => state.form.selectedProducts);
+  
+  const dispatch = useDispatch()
+
+  const {data:InsuranceProducts, isLoading} = useFetchProducts(djangoServerURL)
+
 
   // Call form validation and product selection functions when selected products change
   useEffect(() => {
@@ -33,12 +29,10 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
     const formatTitle = productTitle.replace(/ /g , "_" )
     if (isSelected) {
       // Add the product title to the selected products array
-      setSelectedProducts((prevSelected) => [...prevSelected, formatTitle]);
+      dispatch(addProductData(formatTitle))
     } else {
       // Remove the product title from the selected products array
-      setSelectedProducts((prevSelected) =>
-        prevSelected.filter((title) => title !== formatTitle)
-      );
+      dispatch(removeProductData(formatTitle))
     }
   };
 
@@ -53,6 +47,7 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
               <InsuranceCard
                 title={product.title.toUpperCase()}
                 image={`${djangoServerURL}${product.image_field}`}
+                isSelected={selectedProducts.includes(product.title.replace(/ /g, "_"))}
                 onCheck={(isSelected) =>
                   handleCardSelection(product.title, isSelected)
                 }

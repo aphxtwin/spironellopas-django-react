@@ -1,13 +1,20 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import style from "./InsuranceCard.module.css";
 
-const InsuranceCard = ({title , image, onCheck})=>{
-    const [selected, setSelected] = useState(false);
+const InsuranceCard = ({title , image, onCheck,isSelected})=>{
+
+    const [selected, setSelected] = useState(isSelected);
+
+    useEffect(() => {
+        setSelected(isSelected);
+    }, [isSelected]);
 
     const handleSelect = () => {
-        setSelected(!selected);
-        onCheck(!selected);
-    }
+        const newSelectedState = !selected;
+        setSelected(newSelectedState);
+        onCheck(newSelectedState);
+    };
+    
     return (
         <div 
             className={`${style.InsuranceCard} ${selected ? style.selected : ""}`} 

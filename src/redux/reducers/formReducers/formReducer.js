@@ -1,8 +1,9 @@
 const initialState = {
     formData : {
         personalData : {},
-        productData: {}
-    }
+        productData: {},
+    },
+    selectedProducts: [],
 }
 
 const formReducer = (state = initialState, action) => {
@@ -18,6 +19,18 @@ const formReducer = (state = initialState, action) => {
                     }
                 }
         };
+        case "ADD_PRODUCT_DATA":
+            return {
+                ...state,
+                selectedProducts: [...state.selectedProducts,action.payload]
+            };
+        case "REMOVE_PRODUCT_DATA":
+            return {
+                ...state,
+                selectedProducts: state.selectedProducts.filter(
+                    (productName) => productName !== action.payload
+                ),
+            };
         case "UPDATE_PERSONAL_DATA":
             return {
                 ...state,

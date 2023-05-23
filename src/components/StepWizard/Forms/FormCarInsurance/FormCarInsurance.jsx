@@ -3,7 +3,7 @@ import style from './FormCarInsurance.module.css';
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import YesNoRadio from "../../../FormsToolbox/RadioButton/YesNoRadio";
 import useProductForm from "../../../../hooks/useProductForm";
-import { useSelector } from "react-redux";
+
 
 const FormCarInsurance = () => {
     const initialState={
@@ -14,9 +14,8 @@ const FormCarInsurance = () => {
         isNew: false,
     }
     const productName='SeguroDeAuto'
-    const data = useSelector((state)=>state.form.formData && state.form.formData.productData[productName]|| initialState);
-
-    const [formData, handleChange] = useProductForm(data,productName);
+    
+    const [formData, handleChange] = useProductForm(initialState, productName);
 
     return (
         <div className={style.FormCarInsurance}>

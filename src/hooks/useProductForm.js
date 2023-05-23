@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateProductData } from '../redux/actions/formActions';
-
+import { useSelector } from "react-redux";
 const useProductForm = (initialState, productName) => {
-  const [formData, setFormData] = useState(initialState)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+  const data = useSelector((state) => state.form.formData && state.form.formData.productData[productName] || initialState);
+
+  const [formData, setFormData] = useState(data);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,7 +18,7 @@ const useProductForm = (initialState, productName) => {
     dispatch(updateProductData({ productName, formData }));
   }, [formData, dispatch, productName]);
 
-  return [formData, handleChange]
+  return [formData, handleChange];
 };
 
-export default useProductForm;
+export default useProductForm
