@@ -4,7 +4,7 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import style from './AnteriorButton.module.css';
 
 const AnteriorButton = ({ onClick,className }) => (
-  <button className={`${style.AnteriorButton} ${className ? className : ''}`} onClick={onClick}>
+  <button className={`${style.AnteriorButton} ${className ? style.className : ''}`} onClick={onClick}>
     <FontAwesomeIcon className={style.Icon} icon={faAngleLeft} />
   </button>
 );

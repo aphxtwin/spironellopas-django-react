@@ -6,7 +6,7 @@ const YesNoRadio = ({label,name,onChange}) => {
 
     const handleSelect = (e) => {
         setSelectedValue(e.target.value)
-        onChange({target : {name, value: e.target.value === "true"} });
+        onChange({target : {name, value: e.target.value === 'true'} });
     };
 
     return (
@@ -14,13 +14,13 @@ const YesNoRadio = ({label,name,onChange}) => {
             <p className={style.label}>{label}</p>
             <RadioButton
                 label={"Si"}
-                value="true"
+                value= 'true'
                 checked={selectedValue === "true" }
                 onChange={handleSelect}
             />
             <RadioButton
                 label={"No"}
-                value="false"
+                value='false'
                 checked={selectedValue === "false" }
                 onChange={handleSelect}
             />

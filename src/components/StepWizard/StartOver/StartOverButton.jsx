@@ -3,12 +3,12 @@ import style from './StartOver.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
 
-const StartOver = ({customClassName}) => {
+const StartOverButton = ({customClassName, onOpen}) => {
     return(
-        <div className={`${style.StartOver} ${customClassName ? customClassName : ''}`}>
+        <div onClick={onOpen} className={`${style.StartOver} ${customClassName ? customClassName : ''}`}>
             <FontAwesomeIcon icon={faRotateRight} />
         </div>
     )
 }
 
-export default StartOver;
+export default StartOverButton;

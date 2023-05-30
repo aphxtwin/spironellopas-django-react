@@ -20,7 +20,7 @@
 .SubmitPrompt{
     display: flex;
     position: fixed;
-    top: -1%;
+    top: -8%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,9 @@
 
 .FormBox{
     display: flex;
+    margin-left: 1rem;
 }
+
 .StepButtonFixed{
     position: fixed;
     bottom: 40px;
@@ -41,6 +43,12 @@
     cursor: pointer;
     font-size: 20px;
     color: rgb(81, 81, 81);
+}
+
+.SubmitLastStep{
+    position: fixed;
+    top: 7%;
+    left: 1%;
 }
 
 .pibe{
