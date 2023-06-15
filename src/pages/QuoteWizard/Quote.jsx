@@ -48,7 +48,11 @@ import LastSubmitButton from "../../components/Buttons/AnteriorButton/LastSubmit
                 <div className={lastStep ? styles.SubmitPrompt : styles.PromptBox}>
                     { lastStep &&
                         <LastSubmitButton onClick={handlePrevStep} className={styles.SubmitLastStep}>
+<<<<<<< HEAD
                              ← Ir al paso anterior
+=======
+                            Ir al paso anterior
+>>>>>>> 7607c33d90f5dc17b8f2a1800f853a5e233afa7e
                         </LastSubmitButton>
                     }      
                     <DynamicPrompt

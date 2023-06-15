@@ -14,7 +14,13 @@
     transition: background-color 0.3s ease;
   }
   
+<<<<<<< HEAD
 .LastSubmitButton:hover {
 background-color: rgba(213, 213, 213, 0.173)
 }
+=======
+  .airbnb-button:hover {
+    background-color: #c4d3ff;
+  }
+>>>>>>> 7607c33d90f5dc17b8f2a1800f853a5e233afa7e
   
