@@ -1,0 +1,20 @@
+.LastSubmitButton {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fefefe;
+    color: rgb(91 91 91);
+    border: solid rgb(255 169 0) 2px;
+    padding: 7px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+.LastSubmitButton:hover {
+background-color: rgba(213, 213, 213, 0.173)
+}
+  

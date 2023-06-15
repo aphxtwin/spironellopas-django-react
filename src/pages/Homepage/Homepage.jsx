@@ -10,7 +10,7 @@ const Homepage = () => {
             <Navbar/>
             <HomePageHeader
                 title={"El Seguro Que Conviene"} 
-                subtitle={"Protección instantánea. Unidos por tus intereses."}
+                subtitle={"Revolucionando el bienestar, innovando para tu tranquilidad."}
             />
             <Footer/>
         </div>

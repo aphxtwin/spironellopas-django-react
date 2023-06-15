@@ -2,9 +2,10 @@ import React from "react";
 import ProductSelect from "../Forms/ProductSelect/ProductSelect";
 import FormCarInsurance from "../Forms/FormCarInsurance/FormCarInsurance";
 import FormIntegralDeComercio from "../Forms/FormIntegralDeComercio/FormIntegralDeComercio";
-import FormLifeInsurance from "../Forms/FormLifeInsurance/FormLifeInsurance";
+import FormMotoInsurance from "../Forms/FormMotoInsurance/FormMotoInsurance";
 import PersonalDataForm from "../Forms/PersonalDataForm/PersonalDataForm";
 import SubmitForms from "../Forms/SubmitForms/SubmitForms";
+import FormHogar from "../Forms/FormHogar/FormHogar";
 
 const FormWizardContent = (
     {
@@ -25,8 +26,10 @@ const FormWizardContent = (
                     switch (currentProduct) {
                         case "auto":
                             return <FormCarInsurance onFormValidation={onFormValidation} />;
-                        case "vida":
-                            return <FormLifeInsurance onFormValidation={onFormValidation}/>;
+                        case "moto":
+                            return <FormMotoInsurance onFormValidation={onFormValidation}/>;
+                        case "hogar":
+                            return <FormHogar onFormValidation={onFormValidation}/>;
                         case "Integral_de_comercio":
                             return <FormIntegralDeComercio onFormValidation={onFormValidation}/>;
                         default:

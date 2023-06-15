@@ -15,15 +15,19 @@ const DynamicPrompt = ({selectedProducts, currentStep, currentProductIndex}) =>{
             prompt: "¡Genial! Vamos a cotizar un seguro para tu auto.",
             subprompt: "Necesito algunos datos del vehículo para calcular el mejor precio para tu seguro.",
             },
-            vida: {
-            prompt: "¡Excelente elección! Un seguro de vida es fundamental.",
-            subprompt: "Completá los detalles de tu seguro de vida para continuar.",
+            hogar: {
+            prompt: "¡Excelente elección! Un seguro para tu casa es fundamental.",
+            subprompt: "Completá los detalles de tu hogar para continuar.",
+            },
+            moto: {
+            prompt: "¡Excelente elección! Vamos a cotizar un seguro para tu moto.",
+            subprompt: "Completá los detalles de tu moto para continuar.",
             },
             Integral_de_comercio: {
             prompt: "¡Perfecto! Un seguro integral de comercio es muy importante.",
             subprompt: "Completá los detalles de tu comercio para que podamos cotizar el seguro."
-            }
             },
+        },
 
         {
             prompt: "Información personal",

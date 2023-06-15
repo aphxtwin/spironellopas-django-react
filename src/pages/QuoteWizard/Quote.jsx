@@ -5,9 +5,8 @@ import StepButton from "../../components/Buttons/StepButton/StepButton";
 import styles from "./Quote.module.css";
 import FormWizardContent from "../../components/StepWizard/FormWizardContent/FormWizardContent";
 import useFormWizard from "../../hooks/useFormWizard/useFormWizard";
-import pibe from '../../assets/characters/pibe.svg'
-import { useSwipeable } from "react-swipeable";
 import AnteriorButton from "../../components/Buttons/AnteriorButton/AnteriorButton";
+import LastSubmitButton from "../../components/Buttons/AnteriorButton/LastSubmitButton";
     const Quote = () => {
         
         const [selectedProducts, setSelectedProducts] = useState([]);
@@ -40,26 +39,24 @@ import AnteriorButton from "../../components/Buttons/AnteriorButton/AnteriorButt
 
         },[handleNextStep]);
 
-        const swipeHandler = useSwipeable({
-            onSwipedRight: () => {
-                if (window.innerWidth  <= 768){
-                    handlePrevStep();
-                }
-            },
-        })
 
 
 
         return (
-            <div className={styles.MultiStepWizard} {...swipeHandler}>
-                <NavWizard />
+            <div className={styles.MultiStepWizard}>
+                <NavWizard />          
                 <div className={lastStep ? styles.SubmitPrompt : styles.PromptBox}>
+                    { lastStep &&
+                        <LastSubmitButton onClick={handlePrevStep} className={styles.SubmitLastStep}>
+                             ← Ir al paso anterior
+                        </LastSubmitButton>
+                    }      
                     <DynamicPrompt
                         selectedProducts={selectedProducts}
                         currentStep={currentStep} 
                         currentProductIndex={currentProductIndex}
                     />
-                    {currentStep > 0 && (
+                    {(currentStep > 0 && currentStep < 3)  &&  (
                         <AnteriorButton className={styles.AnteriorButton} onClick={handlePrevStep}/>
                     )}
                     
@@ -88,6 +85,7 @@ import AnteriorButton from "../../components/Buttons/AnteriorButton/AnteriorButt
                     }
 
                 </div>
+
             </div>
         );
     };

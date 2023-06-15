@@ -1,25 +1,22 @@
 import React from "react";
-import style from './FormCarInsurance.module.css';
+import style from './FormMotoInsurance.module.css';
 import TextInput from '../../../FormsToolbox/TextInput/TextInput';
 import YesNoRadio from "../../../FormsToolbox/RadioButton/YesNoRadio";
 import useProductForm from "../../../../hooks/useProductForm";
 
-
-const FormCarInsurance = () => {
+const FormMotoInsurance = () => {
     const initialState={
         brand: "",
         model: "",
         year: "",
-        version:'',
-        hasGNC: '',
-        isNew: '',
+        isNew: false,
     }
-    const productName='SeguroDeAuto'
+    const productName='SeguroDeMoto'
     
     const [formData, handleChange] = useProductForm(initialState, productName);
 
     return (
-        <div className={style.FormCarInsurance}>
+        <div className={style.FormMotoInsurance}>
             <TextInput 
                 label="Marca" 
                 type="text"
@@ -44,20 +41,6 @@ const FormCarInsurance = () => {
                 value={formData.year}
                 onChange={handleChange} 
             />
-            <TextInput 
-                label="Version" 
-                type="text"
-                placeholder="Version"
-                name="version"
-                value={formData.version}
-                onChange={handleChange}
-            />
-            <YesNoRadio
-                label={"Tiene GNC?"}
-                name="hasGNC"
-                value={formData.hasGNC}
-                onChange={handleChange}
-            />
             <YesNoRadio
                 label={"Es 0km?"}
                 name="isNew"
@@ -69,4 +52,4 @@ const FormCarInsurance = () => {
 }
 
 
-export default FormCarInsurance;
+export default FormMotoInsurance;

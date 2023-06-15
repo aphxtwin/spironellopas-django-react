@@ -1,9 +1,9 @@
-.FormIntegralDeComercio{
+.FormMotoInsurance {
     width: 300px;
 }
 
 @media (min-width:768px) {
-    .FormIntegralDeComercio{
+    .FormMotoInsurance{
         width: 600px;
     }
 }

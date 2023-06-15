@@ -1,9 +1,10 @@
-.FormIntegralDeComercio{
+.FormHogar{
+    margin-top: 1rem;
     width: 300px;
 }
 
 @media (min-width:768px) {
-    .FormIntegralDeComercio{
+    .FormHogar{
         width: 600px;
     }
 }

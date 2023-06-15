@@ -20,6 +20,7 @@ const ProductSelect = ({ onFormValidation, onProductSelection }) => {
 
   // Call form validation and product selection functions when selected products change
   useEffect(() => {
+    
     onFormValidation(selectedProducts.length > 0);
     onProductSelection(selectedProducts);
   }, [selectedProducts, onFormValidation, onProductSelection]);

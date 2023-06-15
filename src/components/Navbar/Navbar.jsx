@@ -16,7 +16,7 @@ const Navbar = () => {
     useEffect(() =>{
         const handleScroll = ()=> {
             const headerCTA = document.querySelector("#mainCTA");
-            console.log(headerCTA)
+            
             if (headerCTA){
                 const ctaOffset = headerCTA.getBoundingClientRect().top + window.scrollY;
                 if (window.scrollY > ctaOffset){

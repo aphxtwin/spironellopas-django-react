@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import DatePicker from 'react-date-picker'
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
@@ -9,11 +9,16 @@ const DateOfBirth = ({label,onChange, value}) =>{
     
     // Calculate the date 100 years ago
     const hundredYearsAgo = new Date();
-    hundredYearsAgo.setFullYear(hundredYearsAgo.getFullYear() - 100);
+    hundredYearsAgo.setFullYear(hundredYearsAgo.getFullYear() - 150);
 
     const handleDateChange = (newDate) => {
-        const stringDate = newDate.toISOString()
-        onChange({target:{name:'date_of_birth', value:stringDate }})
+        if (newDate){
+            const stringDate = newDate.toISOString()
+            onChange({target:{name:'date_of_birth', value:stringDate }})
+        } else{
+            onChange({target:{name:'date_of_birth', value:''}})
+        }
+
     }
 
     return (
@@ -26,7 +31,6 @@ const DateOfBirth = ({label,onChange, value}) =>{
                 format={"dd M yyyy"}
                 maxDate={new Date()}
                 minDate={hundredYearsAgo}
-        
                 locale={'es-ES'} 
             />
         </div>
