@@ -1,19 +1,28 @@
 import React from 'react';
-import style from './TextInput.module.css'
+import { Box, TextField, ThemeProvider } from '@mui/material';
+import theme from './theme'
 
 const TextInput = ({ label, name, placeholder, value, onChange, customClassName }) => {
   return (
-    <div className={`${style.TextInput} ${customClassName ? customClassName : ''}`}>
-      <label htmlFor={name}>{label}</label>
-      <input
-        type="text"
-        name={name}
-        id={name}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
-    </div>
+    <ThemeProvider theme={theme}>
+      <Box
+        mt={2}
+        sx={{width:'100%'}}
+      >
+        <TextField
+          className={customClassName}
+          label={label}
+          name={name}
+          id={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          variant="outlined"
+          fullWidth
+          required
+        />
+      </Box>
+    </ThemeProvider>
   );
 };
 

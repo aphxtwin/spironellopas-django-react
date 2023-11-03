@@ -59,7 +59,7 @@ import LastSubmitButton from "../../components/Buttons/AnteriorButton/LastSubmit
                     {(currentStep > 0 && currentStep < 3)  &&  (
                         <AnteriorButton className={styles.AnteriorButton} onClick={handlePrevStep}/>
                     )}
-                    
+
                     <div className={styles.FormBox}>
                         <FormWizardContent
                             currentStep={currentStep}
